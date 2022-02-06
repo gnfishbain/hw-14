@@ -1,0 +1,24 @@
+- name: Install zip
+  hosts: all
+  become: true
+
+  apt:
+    update_cache: yes
+    name: zip
+    state: present
+    install_recommends: yes
+  notify: install and zip
+
+- name: Install vim
+  hosts: all
+  become: true
+
+  apt:
+    update_cache: yes
+    name: vim
+    state: present
+    install_recommends: yes
+  notify: install vim
+
+
+
